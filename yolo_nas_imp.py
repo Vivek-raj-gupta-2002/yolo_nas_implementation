@@ -4,7 +4,7 @@ from super_gradients.training import models
 
 
 class ObjectDetect:
-    def __init__(self, model = Models.YOLO_NAS_S, weight = 'coco') -> None:
+    def __init__(self, model = Models.YOLO_NAS_L, weight = 'coco') -> None:
         self.model = models.get(model, pretrained_weights=weight)
 
     def start_video_cam(self):
@@ -28,6 +28,9 @@ class ObjectDetect:
             arr.append(i)
         return arr[0].draw(), arr[0]
 
+
+
+# for example
 if __name__ == '__main__':
         
     data = ObjectDetect()
